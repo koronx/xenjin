@@ -1,0 +1,4 @@
+#!/bin/bash
+
+docker build -t DOCKER_USER/DOCKER_REPO:DOCKER_TAG .
+docker push DOCKER_USER/DOCKER_REPO:DOCKER_TAG
