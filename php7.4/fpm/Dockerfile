@@ -1,6 +1,5 @@
 FROM php:7.4-fpm-alpine
-RUN apk add git \
-        wget \
+RUN apk add git wget zip \
         && docker-php-ext-enable zip curl redis mysql \
     && rm -rf /var/cache/apk/*
 
