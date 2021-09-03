@@ -1,4 +1,4 @@
-FROM 7.4-fpm-alpine
+FROM php:7.4-fpm-alpine
 RUN apk add git \
         wget \
     && rm -rf /var/cache/apk/*
