@@ -23,7 +23,6 @@ RUN apk add \
         php5-xml \
         php5-zip \
         php5-zlib \
-        php5-mbstring \
         git \
         wget \
     && rm -rf /var/cache/apk/*
