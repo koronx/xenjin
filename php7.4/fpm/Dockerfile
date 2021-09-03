@@ -1,7 +1,8 @@
 FROM php:7.4-fpm-alpine
 RUN apk add git wget \
-        && docker-php-ext-enable gd mysqli \
     && rm -rf /var/cache/apk/*
+
+#        && docker-php-ext-enable gd mysqli \
 
 #COPY conf/php.ini /etc/php5/conf.d/50-setting.ini
 #COPY conf/php-fpm.conf /etc/php5/php-fpm.conf
