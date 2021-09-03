@@ -4,8 +4,7 @@ FROM php:7.4-fpm-alpine
 
 #        && docker-php-ext-enable gd mysqli \
 
-RUN docker-php-ext-install mysqli
-RUN docker-php-ext-enable mysqli
+RUN docker-php-ext-install mysqli gd pdo curl zip xml mbstring
 
 #COPY conf/php.ini /etc/php5/conf.d/50-setting.ini
 #COPY conf/php-fpm.conf /etc/php5/php-fpm.conf
