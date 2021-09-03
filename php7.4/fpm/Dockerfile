@@ -10,9 +10,8 @@ RUN install-php-extensions mysqli gd zip redis
 
 #RUN docker-php-ext-install mysqli gd pdo curl zip xml mbstring
 
-#COPY conf/php.ini /etc/php5/conf.d/50-setting.ini
-#COPY conf/php-fpm.conf /etc/php5/php-fpm.conf
-#RUN ln -s /usr/bin/php5 /usr/bin/php
+COPY conf/php.ini /usr/local/etc/php/conf.d/50-setting.ini
+COPY conf/www.conf /usr/local/etc/php-fpm.d/www.conf
 
 # Install composer from the official image
 COPY --from=composer /usr/bin/composer /usr/bin/composer
