@@ -4,7 +4,11 @@ RUN apk add git wget zlib \
 
 #        && docker-php-ext-enable gd mysqli \
 
-RUN docker-php-ext-install mysqli gd pdo curl zip xml mbstring
+COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/local/bin/
+
+RUN install-php-extensions mysqli gd pdo curl zip xml mbstring
+
+#RUN docker-php-ext-install mysqli gd pdo curl zip xml mbstring
 
 #COPY conf/php.ini /etc/php5/conf.d/50-setting.ini
 #COPY conf/php-fpm.conf /etc/php5/php-fpm.conf
