@@ -1,10 +1,7 @@
 FROM php:7.4-fpm-alpine
 RUN apk add git \
         wget \
-        && docker-php-ext-enable zip \
-        && docker-php-ext-enable curl \
-        && docker-php-ext-enable redis \
-        && docker-php-ext-enable xml \
+        && docker-php-ext-enable zip curl redis mysql \
     && rm -rf /var/cache/apk/*
 
 #COPY conf/php.ini /etc/php5/conf.d/50-setting.ini
