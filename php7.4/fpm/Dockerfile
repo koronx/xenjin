@@ -6,7 +6,7 @@ RUN apk add git wget zlib \
 
 COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/local/bin/
 
-RUN install-php-extensions mysqli gd pdo curl zip xml mbstring redis
+RUN install-php-extensions mysqli gd zip redis
 
 #RUN docker-php-ext-install mysqli gd pdo curl zip xml mbstring
 
