@@ -1,6 +1,6 @@
 FROM php:7.4-fpm-alpine
-#RUN apk add git wget \
-#    && rm -rf /var/cache/apk/*
+RUN apk add git wget zlib \
+    && rm -rf /var/cache/apk/*
 
 #        && docker-php-ext-enable gd mysqli \
 
